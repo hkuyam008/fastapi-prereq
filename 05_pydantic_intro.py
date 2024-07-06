@@ -17,7 +17,7 @@ class Blog(BaseModel):
     title: str
     description: Optional[str] = None
     is_active: bool
-    langiage: Language = Language.JAVA
+    language: Language = Language.JAVA
     created_at: datetime = Field(default_factory=datetime.now)
     comments: Optional[list[Comment]]
     

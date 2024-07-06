@@ -38,12 +38,11 @@ class GetObject:
         return obj    
 
 blog_dependency = GetObject(blogs)
-            
 @app.get("/blog/{id}")
 def get_blog(blog_name: str = Depends(blog_dependency)):
     return blog_name
 
 user_dependency = GetObject(users)
 @app.get("/user/{id}")
-def get_blog(user_name: str = Depends(user_dependency)):
+def get_user(user_name: str = Depends(user_dependency)):
     return user_name
